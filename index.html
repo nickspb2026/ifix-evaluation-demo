@@ -1,11 +1,61 @@
-<!doctype html><html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex, nofollow"><title>iFIX — демонстрация сайта выкупа</title>
+<!doctype html><html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex, nofollow"><title>iFIX — продать iPhone</title>
 <style>
 *{box-sizing:border-box}body{margin:0;background:#f9faf6;color:#162824;font:16px/1.4 "Helvetica Neue",Arial,sans-serif}main,header,footer{width:min(1240px,92%);margin:auto}header,footer,.bar,.actions{display:flex;align-items:center;justify-content:space-between;gap:14px}header{height:72px}a{color:inherit;text-underline-offset:4px}.logo{font-size:36px;font-weight:850;letter-spacing:-3px;text-decoration:none}.city{margin-right:auto;color:#566862}header>a:last-child{text-decoration:none;font-weight:650}.cover{background:#173d36;position:relative;isolation:isolate;overflow:hidden;color:white;padding:42px 5%;min-height:300px}.cover img{position:absolute;inset:0 0 0 auto;width:53%;height:100%;object-fit:cover;z-index:-2;clip-path:polygon(24% 0,100% 0,100% 100%,0 100%)}h1{font:550 clamp(47px,6vw,86px)/.95 Georgia,serif;letter-spacing:-.065em;margin:0}.cover p{max-width:38ch;margin:17px 0 0;color:#dce9dd}.catalog{padding:28px 0 12px}.bar{align-items:flex-end;flex-wrap:wrap}.bar h2,h2{font-size:clamp(26px,3vw,38px);margin:0;letter-spacing:-.055em}.search{background:white;border:1px solid #aab9b2;border-radius:28px;padding:12px 19px;width:min(100%,330px);font:inherit}.shelf{display:flex;gap:8px;overflow:auto;padding:14px 0}.shelf button,.variants button,.link,.primary,.tile{font:inherit;cursor:pointer}.shelf button,.variants button{white-space:nowrap;background:white;color:#18362f;border:1px solid #b6c6bd;border-radius:20px;padding:9px 15px}.shelf button[aria-pressed=true],.variants label:has(input:checked){background:#173d36;color:white}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.tile{background:#e9efe8;border:0;border-bottom:3px solid #c2d0bd;color:#133d32;text-align:left;padding:16px;min-height:78px;font-weight:700;font-size:19px;display:flex;align-items:center;justify-content:space-between}.tile:nth-child(3n+2){background:#ece9f0}.tile:nth-child(3n){background:#f5e9d8}.tile:hover{border-color:#205247}.tile span{font-weight:400}.link{border:0;background:transparent;color:#244c43;text-decoration:underline;text-underline-offset:4px;padding:10px 0}.primary{background:#173d36;color:white;border:0;border-radius:8px;padding:13px 19px;font-weight:650}.controls{display:flex;gap:16px;flex-wrap:wrap}dialog{width:min(510px,94vw);max-height:90vh;border:0;border-radius:16px;padding:25px;color:#162824;background:#f9faf6}dialog::backdrop{background:#10221dd1}dialog .bar{align-items:center}dialog h2{font-size:30px}fieldset{border:0;padding:0;margin:17px 0}legend,.field{font-weight:650}.variants{display:flex;gap:7px;flex-wrap:wrap;margin-top:6px}.variants label{cursor:pointer;border:1px solid #becbc2;padding:8px 11px;border-radius:8px}.variants input{accent-color:#173d36}.field{display:block;margin:12px 0}.field input{display:block;font:inherit;width:100%;padding:10px;border:1px solid #aab9b2;border-radius:7px;margin-top:4px}.hint,footer{font-size:14px;color:#50635c}.ticket{white-space:pre-line;line-height:1.75}footer{padding:24px 0;margin-top:20px;border-top:1px solid #cbd6cb;flex-wrap:wrap}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #bd5a24;outline-offset:2px}[hidden]{display:none!important}@media(max-width:680px){header{height:58px}.city{display:none}.cover{min-height:245px;padding:23px 18px}.cover img{width:46%;clip-path:polygon(30% 0,100% 0,100% 100%,0 100%)}.cover p{width:53%;font-size:14px}.grid{grid-template-columns:1fr 1fr}.tile{font-size:15px;min-height:61px;padding:11px}.search{width:100%}.catalog{padding-top:16px}.bar{gap:8px}.shelf{padding:10px 0}footer{align-items:start}}
-</style><link rel="stylesheet" href="studio.css"><header><a class="logo" href="#">iFIX</a><span class="city">Выкуп техники в Петербурге</span><a href="tel:+78129899890">+7 (812) 989-98-90</a></header><main><p style="margin:0 0 12px;color:#575464;font-size:14px">Демонстрация сайта · форма работает в тестовом режиме</p><section class="hero"><div class="poster"><img src="product.jpg" alt=""><div class="copy"><small>ПЕТЕРБУРГ / ВЫКУП ТЕХНИКИ</small><h1>Сколько стоит<br>твой iPhone?</h1><p>Расскажи, какой у тебя телефон. Мастер учтёт память, состояние корпуса и аккумулятора.</p></div></div>
-<aside><small>ОНЛАЙН-ОЦЕНКА</small><h2>Начнём с модели</h2><p>Выбери свой iPhone, чтобы заполнить заявку.</p><div class="quick"><button onclick="start('iPhone 16')">iPhone 16 <span>↗</span></button><button onclick="start('iPhone 15')">iPhone 15 <span>↗</span></button><button onclick="start('iPhone 13')">iPhone 13 <span>↗</span></button></div><a class="all" href="#catalog">Все модели iPhone <span>↓</span></a></aside></section>
-<section class="steps" aria-label="Как проходит оценка"><div><small>01 / ЗАЯВКА</small><b>Опиши телефон</b></div><div><small>02 / ОЦЕНКА</small><b>Обсуди цену с мастером</b></div><div><small>03 / ВИЗИТ</small><b>Принеси iPhone в сервис</b></div></section><section class="catalog" id="catalog"><div class="bar"><h2>Найди свою модель</h2><input type="search" class="search" id="query" aria-label="Поиск модели" placeholder="Поиск по модели"></div><div class="shelf" id="families" aria-label="Поколения iPhone"></div><div class="grid" id="devices"></div><p id="empty" hidden>Модель не найдена. Можно указать её вручную.</p><div class="controls"><button class="link" id="manual">Указать другую модель</button><button class="link" id="example">Пример заявки для оценщика</button></div></section></main>
-<footer><b>Пункты iFIX</b><a href="https://yandex.ru/maps/?text=Санкт-Петербург%20Коломяжский%20проспект%2017">Пионерская · Коломяжский пр., 17</a><a href="https://yandex.ru/maps/?text=Санкт-Петербург%20Звенигородская%201%20к2">Звенигородская · Звенигородская ул., 1 к. 2</a></footer>
-<dialog id="sheet"><div class="bar"><h2 id="title"></h2><button class="link" id="close">Закрыть</button></div><form id="form"><label class="field" id="manualRow" hidden>Модель<input id="custom" maxlength="60"></label><fieldset><legend>Память</legend><div class="variants" id="sizes"></div></fieldset><fieldset><legend>Состояние</legend><div class="variants" id="states"></div></fieldset><label class="field">Аккумулятор, % (если знаешь)<input id="battery" type="number" min="1" max="100"></label><label class="field">Телефон для связи<input id="phone" type="tel" required maxlength="24" placeholder="+7 000 000-00-00"></label><p class="hint">Демо. Используй тестовый номер.</p><button class="primary">Собрать заявку</button></form><div id="result" hidden><p class="ticket" id="message"></p><p class="hint">Демонстрация. Данные остаются в браузере.</p><button class="primary" id="edit">Изменить данные</button></div></dialog>
+</style><link rel="stylesheet" href="studio.css"><header><a class="logo" href="#">iFIX</a><nav aria-label="Услуги"><a href="#buyback">Скупка</a><a href="#repair">Ремонт</a><a href="#trade">Trade‑In</a><a href="#contacts">Контакты</a></nav><a href="tel:+78129899890">+7 (812) 989-98-90</a></header>
+<main>
+<section class="home-hero">
+  <div><p class="location">Сервисные центры в Санкт-Петербурге</p>
+  <h1>Скупка и ремонт<br>цифровой техники</h1>
+  <p>Выкупаем исправные и сломанные устройства, ремонтируем технику и принимаем её в обмен с доплатой.</p>
+  <a class="primary" href="#buyback">Оценить устройство</a></div>
+  <img src="product.jpg" alt="Смартфон на рабочем столе мастерской">
+</section>
+<section class="address-strip" aria-label="Станции метро"><a href="#contacts">м. Пионерская <span>Коломяжский пр., 17</span></a><a href="#contacts">м. Звенигородская <span>Звенигородская ул., 1 к. 2</span></a></section>
+<section class="service" id="buyback">
+  <div><h2>Продать технику</h2><p>Выбери категорию и опиши состояние. Итоговую стоимость мастер назовёт после осмотра.</p></div>
+  <div class="service-options">
+    <a href="#catalog">iPhone</a>
+    <button data-request="Скупка: другой смартфон">Другие смартфоны</button>
+    <button data-request="Скупка: планшет">Планшеты</button>
+    <button data-request="Скупка: ноутбук">Ноутбуки</button>
+    <button data-request="Скупка: фотоаппарат">Фотоаппараты</button>
+  </div>
+</section>
+<section class="catalog" id="catalog"><div class="bar"><h2>Найди свою модель</h2><input type="search" class="search" id="query" aria-label="Поиск модели" placeholder="Поиск по модели"></div><div class="shelf" id="families" aria-label="Поколения iPhone"></div><div class="grid" id="devices"></div><p id="empty" hidden>Модель не найдена. Можно указать её вручную.</p><div class="controls"><button class="link" id="manual">Указать другую модель</button><button class="link" id="example">Пример заявки для оценщика</button></div></section>
+<div class="service-pair">
+  <section class="service" id="repair">
+    <h2>Ремонт</h2>
+    <p>Меняем экраны, аккумуляторы и разъёмы. Ремонтируем платы, в том числе после попадания воды. Работаем со смартфонами, планшетами и ноутбуками.</p>
+    <button class="primary" data-request="Ремонт">Описать неисправность</button>
+  </section>
+  <section class="service" id="trade">
+    <h2>Trade‑In</h2>
+    <p>Обменяй устройство с доплатой. Укажи модель, которую сдаёшь, и какую технику хочешь получить взамен.</p>
+    <button class="primary" data-request="Trade‑In">Подготовить запрос на обмен</button>
+  </section>
+</div>
+<section class="service" id="contacts">
+  <h2>Сервисные центры iFIX</h2>
+  <div class="contact-list">
+    <article><h3>Пионерская</h3><p>Коломяжский проспект, 17</p><a href="https://yandex.ru/maps/?text=Санкт-Петербург%20Коломяжский%20проспект%2017">Открыть на карте</a></article>
+    <article><h3>Звенигородская</h3><p>Звенигородская улица, 1 к. 2</p><a href="https://yandex.ru/maps/?text=Санкт-Петербург%20Звенигородская%201%20к2">Открыть на карте</a></article>
+    <article><h3>Связаться с iFIX</h3><p><a href="tel:+78129899890">+7 (812) 989-98-90</a><br><a href="mailto:info@ifix-spb.ru">info@ifix-spb.ru</a></p></article>
+  </div>
+</section>
+</main>
+<footer><b>iFIX</b><span>Демонстрация сайта. Формы работают в тестовом режиме.</span></footer>
+<dialog id="service-sheet" aria-labelledby="service-title">
+  <div class="bar"><h2 id="service-title"></h2><button class="link" id="service-close" type="button">Закрыть</button></div>
+  <form id="service-form">
+    <label class="field">Марка и модель<input name="device" required maxlength="100"></label>
+    <label class="field"><span id="service-detail"></span><textarea name="details" required rows="3" maxlength="500"></textarea></label>
+    <label class="field">Телефон для связи<input name="contact" required type="tel" maxlength="24" placeholder="+7 000 000-00-00"></label>
+    <p class="hint">Демо. Используй тестовый номер.</p>
+    <button class="primary">Собрать заявку</button>
+  </form>
+  <div id="service-result" hidden><p class="ticket" id="service-summary"></p><p class="hint">Данные остаются в браузере.</p><button class="primary" id="service-edit" type="button">Изменить данные</button></div>
+</dialog>
+<dialog id="sheet" aria-labelledby="title"><div class="bar"><h2 id="title"></h2><button class="link" id="close">Закрыть</button></div><form id="form"><label class="field" id="manualRow" hidden>Модель<input id="custom" maxlength="60"></label><fieldset><legend>Память</legend><div class="variants" id="sizes"></div></fieldset><fieldset><legend>Состояние</legend><div class="variants" id="states"></div></fieldset><label class="field">Аккумулятор, % (если знаешь)<input id="battery" type="number" min="1" max="100"></label><label class="field">Телефон для связи<input id="phone" type="tel" required maxlength="24" placeholder="+7 000 000-00-00"></label><p class="hint">Демо. Используй тестовый номер.</p><button class="primary">Собрать заявку</button></form><div id="result" hidden><p class="ticket" id="message"></p><p class="hint">Демонстрация. Данные остаются в браузере.</p><button class="primary" id="edit">Изменить данные</button></div></dialog>
 <script src="catalog.js"></script><script>
 const byId=id=>document.getElementById(id);
 const entries=Object.assign({},...groups.map(group=>group[1]));
@@ -46,4 +96,43 @@ form.onsubmit=e=>{e.preventDefault();if(byId('phone').value.replace(/\D/g,'').le
 byId('phone').oninput=()=>byId('phone').setCustomValidity('');
 byId('example').onclick=()=>{start('iPhone 16');form.elements.sizes.value='128 ГБ';form.elements.states.value=states[2];byId('battery').value=87;byId('phone').value='+7 000 000-00-00';receipt()};
 byId('edit').onclick=editing;byId('close').onclick=()=>sheet.close();byId('manual').onclick=()=>start('');byId('query').oninput=render;render();
+const serviceSheet=byId('service-sheet');
+const serviceForm=byId('service-form');
+const serviceResult=byId('service-result');
+const contact=serviceForm.elements.contact;
+function editService(){
+ serviceForm.hidden=false;
+ serviceResult.hidden=true;
+ serviceForm.elements.device.focus();
+}
+document.querySelectorAll('[data-request]').forEach(button=>{
+ button.onclick=()=>{
+  const request=button.dataset.request;
+  byId('service-title').textContent=request;
+  byId('service-detail').textContent={
+   'Ремонт':'Что случилось с устройством?',
+   'Trade‑In':'Что хочешь получить взамен и в каком состоянии твоё устройство?'
+  }[request]||'В каком состоянии устройство?';
+  serviceForm.reset();
+  contact.setCustomValidity('');
+  serviceSheet.showModal();
+  editService();
+ };
+});
+contact.oninput=()=>contact.setCustomValidity('');
+serviceForm.onsubmit=event=>{
+ event.preventDefault();
+ if(contact.value.replace(/\D/g,'').length<7){
+  contact.setCustomValidity('Введи номер телефона');
+  contact.reportValidity();
+  return;
+ }
+ const fields=new FormData(serviceForm);
+ byId('service-summary').textContent=[fields.get('device'),fields.get('details'),fields.get('contact')].join('\n');
+ serviceForm.hidden=true;
+ serviceResult.hidden=false;
+ byId('service-edit').focus();
+};
+byId('service-close').onclick=()=>serviceSheet.close();
+byId('service-edit').onclick=editService;
 </script></html>
