@@ -3,6 +3,9 @@ const path = require('path');
 
 const root = __dirname;
 const src = path.join(root, 'src');
+const out = path.join(root, 'site');
+const basePath = process.env.SITE_BASE_PATH || '';
+const siteUrl = value => `${basePath}/${value}`;
 const assets = path.join(root, 'assets');
 const read = file => fs.readFileSync(path.join(src, file), 'utf8');
 const esc = value => String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -28,16 +31,16 @@ const page = (active, title, desc, body) => `<!doctype html>
 <meta property="og:type" content="website">
 <meta property="og:title" content="${esc(title)} · iFIX">
 <meta property="og:description" content="${esc(desc)}">
-<meta property="og:image" content="assets/og.jpg">
+<meta property="og:image" content="${siteUrl('assets/og.jpg')}">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f4d3f'/%3E%3Ctext x='32' y='43' font-family='Helvetica,Arial' font-size='30' font-weight='800' fill='%23ff7a3c' text-anchor='middle'%3EiFIX%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="${siteUrl('styles.css')}">
 </head>
 <body>
 <a class="skip" href="#main">Перейти к содержимому</a>
 
 <header class="topbar">
   <div class="wrap">
-    <a class="logo" href="index.html">i<b>FIX</b><small>сервис в Петербурге</small></a>
+    <a class="logo" href="${siteUrl('index.html')}">i<b>FIX</b><small>сервис в Петербурге</small></a>
     <nav class="nav" id="nav" aria-label="Основная навигация">
       ${navLinks(active)}
     </nav>
@@ -74,23 +77,23 @@ function navLinks(active) {
     [active === 'index.html' ? '#locations' : 'kontakty.html#addresses', 'Адреса'],
     [active === 'index.html' ? '#faq' : 'index.html#faq', 'Вопросы']
   ];
-  return links.map(([href, label]) => `<a href="${href}"${href === active ? ' aria-current="page"' : ''}>${label}</a>`).join('\n      ');
+  return links.map(([href, label]) => `<a href="${href.startsWith('#') ? href : siteUrl(href)}"${href === active ? ' aria-current="page"' : ''}>${label}</a>`).join('\n      ');
 }
 
 function footer() {
   return `<footer class="footer">
   <div class="wrap">
     <div>
-      <a class="logo" href="index.html">i<b>FIX</b></a>
+      <a class="logo" href="${siteUrl('index.html')}">i<b>FIX</b></a>
       <p>Сервисный центр в Санкт-Петербурге: скупка iPhone и цифровой техники, ремонт и Trade-In. Два адреса, ежедневная работа.</p>
     </div>
     <div>
       <h4>Разделы</h4>
       <ul>
-        <li><a href="index.html">Скупка</a></li>
-        <li><a href="remont.html">Ремонт</a></li>
-        <li><a href="trade-in.html">Trade-In</a></li>
-        <li><a href="kontakty.html">Адреса и контакты</a></li>
+        <li><a href="${siteUrl('index.html')}">Скупка</a></li>
+        <li><a href="${siteUrl('remont.html')}">Ремонт</a></li>
+        <li><a href="${siteUrl('trade-in.html')}">Trade-In</a></li>
+        <li><a href="${siteUrl('kontakty.html')}">Адреса и контакты</a></li>
       </ul>
     </div>
     <div>
@@ -227,10 +230,12 @@ const faqBlock = (items) => `<section class="section alt" id="faq">
 const indexBody = fs.readFileSync(path.join(src, 'index.html'), 'utf8')
   .match(/<main id="main">([\s\S]*)<\/main>/)[1]
   .replace(/<script[\s\S]*?<\/script>/g, '')
+  .replace(/(src=")assets\//g, `$1${basePath}/assets/`)
   .trim();
 
 const skupkaBody = fs.readFileSync(path.join(src, 'index.html'), 'utf8')
   .match(/<main id="main">([\s\S]*)<\/main>/)[1]
+  .replace(/(src=")assets\//g, `$1${basePath}/assets/`)
   .trim();
 
 
@@ -246,7 +251,7 @@ const remontBody = `
           <a class="btn btn-ghost" href="tel:+78129899890" style="color:#fff">Позвонить</a>
         </div>
       </div>
-      <img class="hero-photo" src="assets/bench.jpg" alt="Смартфон на рабочем столе сервисной мастерской" width="900" height="600">
+      <img class="hero-photo" src="${siteUrl('assets/bench.jpg')}" alt="Смартфон на рабочем столе сервисной мастерской" width="900" height="600">
     </div>
   </section>
 
@@ -295,7 +300,7 @@ const remontBody = `
   <section class="section alt">
     <div class="wrap">
       <div class="how reveal">
-        <img src="assets/bench.jpg" alt="Рабочее место мастера" loading="lazy" width="900" height="600">
+        <img src="${siteUrl('assets/bench.jpg')}" alt="Рабочее место мастера" loading="lazy" width="900" height="600">
         <div>
           <p class="kicker">Как проходит ремонт</p>
           <h2 style="font-size:clamp(26px,3.2vw,38px);letter-spacing:-.035em;font-weight:720">От диагностики до гарантии</h2>
@@ -331,7 +336,7 @@ const tradeBody = `
           <a class="btn btn-ghost" href="tel:+78129899890" style="color:#fff">Позвонить</a>
         </div>
       </div>
-      <img class="hero-photo" src="assets/phone-2.jpg" alt="Смартфон на столе мастерской" width="360" height="360">
+      <img class="hero-photo" src="${siteUrl('assets/phone-2.jpg')}" alt="Смартфон на столе мастерской" width="360" height="360">
     </div>
   </section>
 
@@ -410,10 +415,25 @@ const contaktyBody = `
   </section>
 ${ctaBand()}`;
 
-fs.writeFileSync(path.join(root, 'index.html'), page('index.html', pages[0].title, pages[0].desc, indexBody), 'utf8');
-fs.writeFileSync(path.join(root, 'skupka.html'), page('index.html', pages[1].title, pages[1].desc, skupkaBody), 'utf8');
-fs.writeFileSync(path.join(root, 'remont.html'), page('remont.html', pages[2].title, pages[2].desc, remontBody), 'utf8');
-fs.writeFileSync(path.join(root, 'trade-in.html'), page('trade-in.html', pages[3].title, pages[3].desc, tradeBody), 'utf8');
-fs.writeFileSync(path.join(root, 'kontakty.html'), page('kontakty.html', pages[4].title, pages[4].desc, contaktyBody), 'utf8');
+const outputPages = [
+  ['index.html', pages[0].title, pages[0].desc, indexBody],
+  ['skupka.html', pages[1].title, pages[1].desc, skupkaBody],
+  ['remont.html', pages[2].title, pages[2].desc, remontBody],
+  ['trade-in.html', pages[3].title, pages[3].desc, tradeBody],
+  ['kontakty.html', pages[4].title, pages[4].desc, contaktyBody]
+];
 
-console.log('built', fs.readdirSync(root).join(' '));
+fs.rmSync(out, { recursive: true, force: true });
+fs.mkdirSync(out, { recursive: true });
+for (const [file, title, desc, body] of outputPages) {
+  fs.writeFileSync(path.join(out, file), page(file, title, desc, body), 'utf8');
+}
+
+fs.copyFileSync(path.join(src, 'styles.css'), path.join(out, 'styles.css'));
+fs.copyFileSync(path.join(src, 'app.js'), path.join(out, 'app.js'));
+fs.cpSync(assets, path.join(out, 'assets'), { recursive: true });
+const notFound = fs.readFileSync(path.join(root, '404.html'), 'utf8')
+  .replace(/\{\{BASE_PATH\}\}/g, basePath);
+fs.writeFileSync(path.join(out, '404.html'), notFound, 'utf8');
+fs.writeFileSync(path.join(out, '.nojekyll'), '', 'utf8');
+console.log('built site/', fs.readdirSync(out).join(' '));

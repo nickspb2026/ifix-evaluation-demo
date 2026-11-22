@@ -25,13 +25,13 @@ jobs:
         with:
           node-version: 22
       - name: Build site
-        run: node build.js
+        run: SITE_BASE_PATH="/${GITHUB_REPOSITORY#*/}" node build.js
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: site
 
   deploy:
     environment:
