@@ -352,7 +352,8 @@ ul, ol { padding: 0; list-style: none; }
 
 /* ---------- Как проходит ---------- */
 .how { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
-.how img { border-radius: var(--radius); width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4 / 3; }
+.how img { border-radius: var(--radius); width: 100%; height: auto; object-fit: cover; aspect-ratio: 4 / 3; }
+.hero-page .hero-photo { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--radius); }
 .steps-list { display: grid; gap: 4px; counter-reset: step; }
 .steps-list li {
   display: grid; grid-template-columns: 44px 1fr; gap: 16px; padding: 16px 0;
@@ -512,6 +513,8 @@ body:has(dialog[open]) { overflow: hidden; }
   .location-card .lc-body { padding: 18px; }
   .faq summary { padding: 16px 34px 16px 0; font-size: 16px; }
   .faq details p { padding-right: 20px; font-size: 15px; }
+  .how img, .hero-page .hero-photo { width: 100%; height: auto; aspect-ratio: auto; object-fit: contain; }
+  .hero-page .hero-photo { aspect-ratio: 3 / 2; object-fit: cover; }
   .footer { padding: 32px 0 26px; }
   .footer .wrap { grid-template-columns: 1fr; gap: 22px; }
   dialog.sheet {
