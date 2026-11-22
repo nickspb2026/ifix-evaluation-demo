@@ -1,0 +1,1070 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Скупка техники · iFIX</title>
+<meta name="description" content="Выкуп iPhone, смартфонов, планшетов, ноутбуков и фотоаппаратов в Петербурге. Оценка по модели и состоянию, оплата на месте.">
+<meta name="theme-color" content="#0f4d3f">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Скупка техники · iFIX">
+<meta property="og:description" content="Выкуп iPhone, смартфонов, планшетов, ноутбуков и фотоаппаратов в Петербурге. Оценка по модели и состоянию, оплата на месте.">
+<meta property="og:image" content="assets/og.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f4d3f'/%3E%3Ctext x='32' y='43' font-family='Helvetica,Arial' font-size='30' font-weight='800' fill='%23ff7a3c' text-anchor='middle'%3EiFIX%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Перейти к содержимому</a>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="logo" href="index.html">i<b>FIX</b><small>сервис в Петербурге</small></a>
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <a href="index.html" aria-current="page">Скупка</a>
+      <a href="remont.html">Ремонт</a>
+      <a href="trade-in.html">Trade-In</a>
+      <a href="#locations">Адреса</a>
+      <a href="#faq">Вопросы</a>
+    </nav>
+    <a class="topbar-phone" href="tel:+78129899890">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+      +7 (812) 989-98-90
+    </a>
+    <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="nav" aria-label="Меню">
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow"><i></i>Сервисные центры iFIX в Санкт-Петербурге</p>
+        <h1>Скупка iPhone и <em>цифровой техники</em></h1>
+        <p class="hero-lead">Сдайте телефон, планшет или ноутбук в любом состоянии. Оцените устройство заранее и приходите на бесплатный осмотр.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#quote">Оценить iPhone</a>
+          <a class="btn btn-ghost" href="tel:+78129899890" style="color:#fff">Позвонить</a>
+        </div>
+        <ul class="hero-notes">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg>Принимаем и нерабочие устройства</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg>Оплата после осмотра</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg>Данные удаляем при вас</li>
+        </ul>
+      </div>
+
+      <form class="quote-card" id="quick" novalidate>
+        <div class="qc-head">
+          <h2>Быстрая оценка</h2>
+          <span class="qc-note">до 1 минуты</span>
+        </div>
+        <label class="qc-field">
+          <span>Модель iPhone</span>
+          <div class="qc-input">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+            <input id="hero-model" type="text" autocomplete="off" placeholder="Например, iPhone 13 Pro 256" aria-autocomplete="list" aria-controls="hero-suggest" aria-describedby="hero-hint">
+            <div class="qc-suggest" id="hero-suggest" role="listbox" aria-label="Подходящие модели"></div>
+          </div>
+        </label>
+        <div class="qc-field qc-memory" id="hero-memory">
+          <span>Объём памяти</span>
+          <div class="qc-chips" id="hero-sizes"></div>
+        </div>
+        <div class="qc-field">
+          <span>Состояние</span>
+          <div class="qc-chips" id="hero-conditions"></div>
+        </div>
+        <div class="qc-foot">
+          <button class="btn btn-primary" type="submit">Продолжить</button>
+        </div>
+        <p class="qc-price" id="hero-price" hidden></p>
+        <p class="qc-note" id="hero-hint" style="margin-top:8px">Точную цену мастер называет после осмотра.</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="addresses" aria-label="Сервисные центры">
+    <div class="wrap">
+      <a href="https://yandex.ru/maps/?text=Санкт-Петербург%2C%20Коломяжский%20проспект%2C%2017">
+        <strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>м. Пионерская</strong>
+        <span>Коломяжский пр., 17, ТК «Карусель»</span>
+      </a>
+      <a href="https://yandex.ru/maps/?text=Санкт-Петербург%2C%20Звенигородская%20улица%2C%201%20к2">
+        <strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>м. Звенигородская</strong>
+        <span>Звенигородская ул., 1 к2</span>
+      </a>
+      <div>
+        <strong>Ежедневно</strong>
+        <span>с 10:00 до 21:00</span>
+      </div>
+      <a href="mailto:info@ifix-spb.ru">
+        <strong>info@ifix-spb.ru</strong>
+        <span>Написать письмо</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="kicker">Чем помогаем</p>
+        <h2>Три услуги в одном сервисе</h2>
+        <p>Выкупаем, ремонтируем и меняем технику. Если устройство не работает, его можно сдать как есть или сначала восстановить.</p>
+      </div>
+      <div class="services">
+        <article class="service-card reveal">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 5.5h2"/></svg></div>
+          <h3>Скупка</h3>
+          <p>Покупаем iPhone, смартфоны других брендов, планшеты, ноутбуки и цифровые фотоаппараты.</p>
+          <ul>
+            <li>Рабочие и нерабочие устройства</li>
+            <li>Оплата наличными или на карту</li>
+            <li>Данные удаляем перед продажей</li>
+          </ul>
+          <a class="card-link" href="#buyback"><span class="text">Оценить устройство</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </article>
+        <article class="service-card reveal" id="repair">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14.5 3.5a4.5 4.5 0 0 0-5.9 5.9L3 15v3.5h4.5l5.6-5.6a4.5 4.5 0 0 0 5.9-5.9l-2.6 2.6-2-2z"/></svg></div>
+          <h3>Ремонт</h3>
+          <p>Меняем экраны и аккумуляторы, ремонтируем разъёмы, платы и технику после залития.</p>
+          <ul>
+            <li>Бесплатная диагностика</li>
+            <li>Apple, Samsung, Xiaomi, Honor</li>
+            <li>Гарантия до 6 месяцев</li>
+          </ul>
+          <button class="card-link" type="button" data-request="repair"><span class="text">Заказать диагностику</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </article>
+        <article class="service-card reveal" id="trade">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 8h13l-3-3M20 16H7l3 3"/></svg></div>
+          <h3>Trade-In</h3>
+          <p>Меняете старое устройство на новое с доплатой разницы. Стоимость сданного засчитываем в покупку.</p>
+          <ul>
+            <li>Телефоны и планшеты</li>
+            <li>Ноутбуки и фототехника</li>
+            <li>Аксессуары в наличии</li>
+          </ul>
+          <button class="card-link" type="button" data-request="trade"><span class="text">Подготовить обмен</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="buyback">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="kicker">Скупка</p>
+        <h2>Оценка iPhone за несколько шагов</h2>
+        <p>Выберите модель, память и состояние. Мастер увидит заявку и подготовится к вашему визиту. Точную сумму называем после осмотра.</p>
+      </div>
+
+      <div class="calc" id="quote">
+        <div class="calc-form" id="calc-form">
+          <div class="step">
+            <div class="step-head"><b>1</b><span>Модель iPhone</span></div>
+            <div class="search-field">
+              <input id="search" type="search" autocomplete="off" placeholder="Например, 13 Pro 256 или 16e" aria-label="Поиск модели iPhone" aria-describedby="search-hint">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+            </div>
+            <p class="field-hint" id="search-hint">Можно ввести номер поколения, название и объём памяти.</p>
+            <div class="model-grid" id="models" role="group" aria-label="Модели iPhone"></div>
+            <p class="model-empty" id="models-empty" hidden>Такой модели в списке нет. Напишите её в поле модели в заявке ниже - мастер уточнит по телефону.</p>
+            <p class="match-badge" id="match" hidden></p>
+          </div>
+
+          <div class="step" id="step-size" hidden>
+            <div class="step-head"><b>2</b><span>Объём памяти</span></div>
+            <div class="qc-chips" id="sizes" role="group" aria-label="Объём памяти"></div>
+          </div>
+
+          <div class="step">
+            <div class="step-head"><b>3</b><span>Состояние</span></div>
+            <div class="cond-grid" id="conditions" role="group" aria-label="Состояние телефона"></div>
+          </div>
+
+          <div class="step">
+            <div class="step-head"><b>4</b><span>Контакт для связи</span></div>
+            <div class="inline-fields">
+              <label class="field-label">Имя
+                <input id="name" type="text" autocomplete="given-name" maxlength="40" placeholder="Как к вам обращаться">
+              </label>
+              <label class="field-label">Телефон
+                <input id="phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="22" placeholder="+7 000 000-00-00">
+              </label>
+            </div>
+            <p class="field-hint">Перезвоним в часы работы сервиса и договоримся о визите.</p>
+          </div>
+
+          <p class="error" id="error" role="alert"></p>
+          <p class="field-hint" style="margin-top:14px">Это демонстрационная версия: заявка не отправляется на сервер, данные остаются в браузере.</p>
+        </div>
+
+        <aside class="calc-summary" aria-labelledby="summary-title">
+          <h3 id="summary-title">Ваша заявка</h3>
+          <p>Так её увидит мастер iFIX</p>
+          <dl class="summary-list">
+            <div><dt>Модель</dt><dd id="out-model"></dd></div>
+            <div><dt>Память</dt><dd id="out-size"></dd></div>
+            <div><dt>Состояние</dt><dd id="out-condition"></dd></div>
+            <div><dt>Контакт</dt><dd id="out-contact"></dd></div>
+          </dl>
+          <div class="summary-cta">
+            <button class="btn btn-brand" id="submit" type="button">Собрать заявку</button>
+          </div>
+          <div class="summary-status" id="status" role="status" aria-live="polite"></div>
+          <div class="ticket-head" id="ticket-head" hidden>
+            <button class="link-btn" id="copy" type="button">Скопировать текст заявки</button>
+            <button class="link-btn" id="reset" type="button">Заполнить заново</button>
+          </div>
+          <pre class="ticket" id="ticket" aria-label="Текст заявки"></pre>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="how reveal">
+        <img src="assets/bench.jpg" alt="Смартфон на рабочем столе сервисной мастерской" loading="lazy" width="900" height="600">
+        <div>
+          <p class="kicker">Как проходит визит</p>
+          <h2 style="font-size:clamp(26px,3.2vw,38px);letter-spacing:-.035em;font-weight:720">Осмотр, цена, оплата</h2>
+          <ol class="steps-list" style="margin-top:18px">
+            <li><div><b>Приносите устройство</b><span>В любой из двух центров iFIX. Заранее оцените телефон на сайте, чтобы понимать порядок цены.</span></div></li>
+            <li><div><b>Мастер осматривает</b><span>Проверяет корпус, экран, аккумулятор и работоспособность. Если техника в лучшем состоянии, чем вы ожидали, сумму увеличим.</span></div></li>
+            <li><div><b>Согласуем стоимость</b><span>Объясняем, из чего складывается цена. Вы решаете, продавать или отказаться.</span></div></li>
+            <li><div><b>Оплата и удаление данных</b><span>Деньги выдаём наличными или на карту. Данные удаляем при вас, перед тем как устройство покинет прилавок.</span></div></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="kicker">Почему iFIX</p>
+        <h2>Что получает продавец</h2>
+      </div>
+      <div class="reasons">
+        <div class="reason reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v18M7 8h7a3.5 3.5 0 0 1 0 7H8a3.5 3.5 0 0 0 0 7h8"/></svg>
+          <b>Оплата на месте</b>
+          <span>Наличными или на карту, сразу после согласования суммы.</span>
+        </div>
+        <div class="reason reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg>
+          <b>Данные под защитой</b>
+          <span>Перед продажей или ремонтом удаляем личные данные с устройства.</span>
+        </div>
+        <div class="reason reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <b>Две точки в городе</b>
+          <span>Пионерская и Звенигородская, ежедневно с 10:00 до 21:00.</span>
+        </div>
+        <div class="reason reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+          <b>Понятная оценка</b>
+          <span>Объясняем, как формируется цена, и не скрываем деталей.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="locations">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="kicker">Адреса</p>
+        <h2>Куда привезти устройство</h2>
+        <p>Часы работы в демо показываем как пример: ежедневно 10:00-21:00, уточним у собственника. Наличные и оплата на карту на месте.</p>
+      </div>
+      <div class="locations">
+        <article class="location-card reveal">
+          <div class="lc-body">
+            <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Пионерская</h3>
+            <p>Санкт-Петербург, Коломяжский проспект, 17<br>ТК «Карусель», 2 этаж, у эскалатора</p>
+            <div class="lc-meta"><span class="badge">Ежедневно 10:00-21:00</span><span class="badge">Метро Пионерская</span></div>
+            <div class="lc-actions">
+              <a class="btn btn-light" href="https://yandex.ru/maps/?text=Санкт-Петербург%2C%20Коломяжский%20проспект%2C%2017">Маршрут</a>
+              <a class="btn btn-light" href="tel:+78129899890">Позвонить</a>
+            </div>
+          </div>
+        </article>
+        <article class="location-card reveal">
+          <div class="lc-body">
+            <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Звенигородская</h3>
+            <p>Санкт-Петербург, Звенигородская улица, 1 к2<br>ТК «Звенигородский», 2 этаж</p>
+            <div class="lc-meta"><span class="badge">Ежедневно 10:00-21:00</span><span class="badge">Метро Звенигородская</span></div>
+            <div class="lc-actions">
+              <a class="btn btn-light" href="https://yandex.ru/maps/?text=Санкт-Петербург%2C%20Звенигородская%20улица%2C%201%20к2">Маршрут</a>
+              <a class="btn btn-light" href="tel:+79522469890">Мобильный</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="faq">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="kicker">Вопросы</p>
+        <h2>Что чаще всего спрашивают</h2>
+      </div>
+      <div class="faq reveal">
+        <details open>
+          <summary>Можно ли сдать телефон с разбитым экраном?</summary>
+          <p>Да. Принимаем устройства в любом состоянии, в том числе нерабочие и на запчасти. Если телефон не включается, мастер оценит его как неисправный.</p>
+        </details>
+        <details>
+          <summary>Нужна ли регистрация или запись?</summary>
+          <p>Нет. Можно приехать в любой из центров в часы работы. Если удобно, оставьте заявку на сайте: мастер увидит модель и состояние и подготовится к визиту.</p>
+        </details>
+        <details>
+          <summary>Какой iPhone принимаете?</summary>
+          <p>Любой модели и объёма памяти, включая старые поколения. На странице оценки перечислены варианты от iPhone 17 до iPhone 5.</p>
+        </details>
+        <details>
+          <summary>Что сделать с данными перед продажей?</summary>
+          <p>Сделайте резервную копию и выйдите из iCloud. Если не получается, мастер поможет удалить данные и объяснит, как отвязать устройство от аккаунта.</p>
+        </details>
+        <details>
+          <summary>Когда выплачивают деньги?</summary>
+          <p>Сразу после осмотра и согласования суммы, наличными или на карту. Заявка на сайте не фиксирует цену: итоговую стоимость называет мастер.</p>
+        </details>
+        <details>
+          <summary>Сколько занимает ремонт?</summary>
+          <p>Большинство ремонтов делаем в день обращения. Сложные случаи, например плата после залития, требуют больше времени, и мастер заранее согласует сроки.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tight" id="call">
+    <div class="wrap">
+      <div class="cta-band reveal">
+        <div>
+          <h2>Не хотите заполнять форму?</h2>
+          <p>Позвоните в сервис, мастер ответит на вопросы и подскажет, когда приехать.</p>
+        </div>
+        <div class="cta-band-actions">
+          <a class="btn btn-primary" href="tel:+78129899890">+7 (812) 989-98-90</a>
+          <a class="btn btn-light" href="tel:+79522469890">+7 (952) 246-98-90</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div>
+      <a class="logo" href="index.html">i<b>FIX</b></a>
+      <p>Сервисный центр в Санкт-Петербурге: скупка iPhone и цифровой техники, ремонт и Trade-In. Два адреса, ежедневная работа.</p>
+    </div>
+    <div>
+      <h4>Разделы</h4>
+      <ul>
+        <li><a href="index.html">Скупка</a></li>
+        <li><a href="remont.html">Ремонт</a></li>
+        <li><a href="trade-in.html">Trade-In</a></li>
+        <li><a href="kontakty.html">Адреса и контакты</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Контакты</h4>
+      <ul>
+        <li><a href="tel:+78129899890">+7 (812) 989-98-90</a></li>
+        <li><a href="tel:+79522469890">+7 (952) 246-98-90</a></li>
+        <li><a href="mailto:info@ifix-spb.ru">info@ifix-spb.ru</a></li>
+        <li>Коломяжский пр., 17</li>
+        <li>Звенигородская ул., 1 к2</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap legal">
+    <span>Демонстрационная версия сайта для iFIX</span>
+    <span>Телефоны, адреса и услуги совпадают с ifix-spb.ru</span>
+    <span>Фото: Apple Newsroom</span>
+  </div>
+</footer>
+
+<dialog class="sheet" id="sheet" aria-labelledby="sheet-title">
+  <div class="sheet-body">
+    <div class="sheet-head">
+      <div>
+        <h2 id="sheet-title">Заявка</h2>
+        <p id="sheet-lead"></p>
+      </div>
+      <button class="sheet-close" id="sheet-close" type="button" aria-label="Закрыть">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <form id="sheet-form" novalidate>
+      <label class="field-label" style="margin-top:14px">Модель и устройство
+        <input id="s-model" type="text" autocomplete="off" maxlength="80" placeholder="iPhone 13 Pro, 256 ГБ">
+      </label>
+      <label class="field-label" style="margin-top:12px"><span id="s-detail-label">Что случилось с устройством?</span>
+        <textarea id="s-detail" rows="3" maxlength="400" placeholder="Опишите неисправность или что хотите поменять"></textarea>
+      </label>
+      <label class="field-label" style="margin-top:12px">Телефон для связи
+        <input id="s-phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="22" placeholder="+7 000 000-00-00" required>
+      </label>
+      <p class="field-hint">Демонстрационная версия: заявка никуда не отправляется.</p>
+      <p class="error" id="s-error" role="alert"></p>
+      <button class="btn btn-primary" style="margin-top:14px" type="submit">Собрать заявку</button>
+    </form>
+    <div class="result" id="sheet-result">
+      <p style="color:var(--mute);font-size:15px;margin-top:14px">Готовый текст заявки для мастера:</p>
+      <pre class="ticket is-visible" id="sheet-ticket"></pre>
+      <div style="display:flex;gap:10px;margin-top:16px;flex-wrap:wrap">
+        <button class="btn btn-light" id="sheet-copy" type="button">Скопировать</button>
+        <button class="btn btn-light" id="sheet-edit" type="button">Изменить</button>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<script>var catalog = {"groups":[["iPhone 17",{"iPhone 17 Pro Max":[256,512,1024,2048],"iPhone 17 Pro":[256,512,1024],"iPhone 17":[256,512],"iPhone Air":[256,512,1024]}],["iPhone 16",{"iPhone 16 Pro Max":[256,512,1024],"iPhone 16 Pro":[128,256,512,1024],"iPhone 16 Plus":[128,256,512],"iPhone 16":[128,256,512],"iPhone 16e":[128,256,512]}],["iPhone 15",{"iPhone 15 Pro Max":[256,512,1024],"iPhone 15 Pro":[128,256,512,1024],"iPhone 15 Plus":[128,256,512],"iPhone 15":[128,256,512]}],["iPhone 14",{"iPhone 14 Pro Max":[128,256,512,1024],"iPhone 14 Pro":[128,256,512,1024],"iPhone 14 Plus":[128,256,512],"iPhone 14":[128,256,512]}],["iPhone 13",{"iPhone 13 Pro Max":[128,256,512,1024],"iPhone 13 Pro":[128,256,512,1024],"iPhone 13":[128,256,512],"iPhone 13 mini":[128,256,512]}],["iPhone 12",{"iPhone 12 Pro Max":[128,256,512],"iPhone 12 Pro":[128,256,512],"iPhone 12":[64,128,256],"iPhone 12 mini":[64,128,256]}],["iPhone 11",{"iPhone 11 Pro Max":[64,256,512],"iPhone 11 Pro":[64,256,512],"iPhone 11":[64,128,256]}],["iPhone X, 8 и 7",{"iPhone XR":[64,128,256],"iPhone XS Max":[64,256,512],"iPhone XS":[64,256,512],"iPhone X":[64,256],"iPhone 8 Plus":[64,128,256],"iPhone 8":[64,128,256],"iPhone 7 Plus":[32,128,256],"iPhone 7":[32,128,256]}],["iPhone 6 и старше",{"iPhone 6s Plus":[16,32,64,128],"iPhone 6s":[16,32,64,128],"iPhone 6 Plus":[16,64,128],"iPhone 6":[16,32,64,128],"iPhone SE (1-го поколения)":[16,32,64,128],"iPhone 5s":[16,32,64],"iPhone 5c":[8,16,32],"iPhone 5":[16,32,64]}]]};</script>
+<script>/* Данные каталога iFIX: реальные модели Apple (актуально на конец 2026 года),
+   объёмы памяти соответствуют официальным вариантам. */
+var catalogData = {
+  groups: [
+    ['iPhone 17', {
+      'iPhone 17 Pro Max': [256, 512, 1024, 2048],
+      'iPhone 17 Pro': [256, 512, 1024],
+      'iPhone 17': [256, 512],
+      'iPhone Air': [256, 512, 1024]
+    }],
+    ['iPhone 16', {
+      'iPhone 16 Pro Max': [256, 512, 1024],
+      'iPhone 16 Pro': [128, 256, 512, 1024],
+      'iPhone 16 Plus': [128, 256, 512],
+      'iPhone 16': [128, 256, 512],
+      'iPhone 16e': [128, 256, 512]
+    }],
+    ['iPhone 15', {
+      'iPhone 15 Pro Max': [256, 512, 1024],
+      'iPhone 15 Pro': [128, 256, 512, 1024],
+      'iPhone 15 Plus': [128, 256, 512],
+      'iPhone 15': [128, 256, 512]
+    }],
+    ['iPhone 14', {
+      'iPhone 14 Pro Max': [128, 256, 512, 1024],
+      'iPhone 14 Pro': [128, 256, 512, 1024],
+      'iPhone 14 Plus': [128, 256, 512],
+      'iPhone 14': [128, 256, 512]
+    }],
+    ['iPhone 13', {
+      'iPhone 13 Pro Max': [128, 256, 512, 1024],
+      'iPhone 13 Pro': [128, 256, 512, 1024],
+      'iPhone 13': [128, 256, 512],
+      'iPhone 13 mini': [128, 256, 512]
+    }],
+    ['iPhone 12', {
+      'iPhone 12 Pro Max': [128, 256, 512],
+      'iPhone 12 Pro': [128, 256, 512],
+      'iPhone 12': [64, 128, 256],
+      'iPhone 12 mini': [64, 128, 256]
+    }],
+    ['iPhone 11', {
+      'iPhone 11 Pro Max': [64, 256, 512],
+      'iPhone 11 Pro': [64, 256, 512],
+      'iPhone 11': [64, 128, 256]
+    }],
+    ['iPhone X, 8 и 7', {
+      'iPhone XR': [64, 128, 256],
+      'iPhone XS Max': [64, 256, 512],
+      'iPhone XS': [64, 256, 512],
+      'iPhone X': [64, 256],
+      'iPhone 8 Plus': [64, 128, 256],
+      'iPhone 8': [64, 128, 256],
+      'iPhone 7 Plus': [32, 128, 256],
+      'iPhone 7': [32, 128, 256]
+    }],
+    ['iPhone 6 и старше', {
+      'iPhone 6s Plus': [16, 32, 64, 128],
+      'iPhone 6s': [16, 32, 64, 128],
+      'iPhone 6 Plus': [16, 64, 128],
+      'iPhone 6': [16, 32, 64, 128],
+      'iPhone SE (1-го поколения)': [16, 32, 64, 128],
+      'iPhone 5s': [16, 32, 64],
+      'iPhone 5c': [8, 16, 32],
+      'iPhone 5': [16, 32, 64]
+    }]
+  ]
+};
+
+const conditions = [
+  ['Как новый', 'Работает, без заметных следов использования'],
+  ['Бывший в употреблении', 'Царапины на корпусе или экране'],
+  ['Требует ремонта', 'Разбит дисплей или телефон не включается']
+];
+
+const GENERIC = new Set(['iphone', 'apple']);
+
+/* Приводим запрос к устойчивому виду: латиница/кириллица, объём памяти, тире. */
+function normalize(text) {
+  return text
+    .toLowerCase()
+    .replace(/[ё]/g, 'е')
+    .replace(/айфон/g, 'iphone')
+    .replace(/про/g, 'pro')
+    .replace(/плюс/g, 'plus')
+    .replace(/мини/g, 'mini')
+    .replace(/макс/g, 'max')
+    .replace(/(\d)\s?(тб|tb)/g, '$1tb')
+    .replace(/(\d)\s?(гб|gb)/g, '$1gb')
+    .replace(/(\d+)(tb|gb)/g, ' $1$2 ')
+    .replace(/[^a-z0-9 ]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+const phones = catalog.groups.flatMap(([family, entries]) =>
+  Object.entries(entries).map(([name, sizes]) => ({ name, sizes, family })));
+
+/* Объём из запроса («128», «128gb», «1tb») сверяем с реальными вариантами модели. */
+function sizeHasToken(sizes, word) {
+  const digits = word.replace(/(gb|tb)$/, '');
+  if (!/^\d+$/.test(digits)) return false;
+  const need = Number(digits);
+  if (/tb$/.test(word)) return sizes.includes(need * 1024);
+  return sizes.includes(need);
+}
+
+/* Все слова запроса должны найтись в названии (отдельными токенами) или среди объёмов модели. */
+function matchModel(name, sizes, query) {
+  const words = normalize(query).split(' ').filter(Boolean);
+  if (!words.length) return true;
+
+  const nameWords = normalize(name).split(' ').filter(Boolean);
+  const vocab = new Set(['iphone', 'apple', 'pro', 'max', 'plus', 'mini', 'air', 'e', 'se', 'x', 'xs', 'xr',
+    'c', 's'].concat(nameWords));
+  if (!words.some(word => vocab.has(word))) return false;
+
+  return words.every(word => {
+    const digits = word.replace(/(gb|tb)$/, '');
+    if (GENERIC.has(word)) return true;
+    if (nameWords.includes(digits)) return true;
+    if (/^\d+$/.test(digits)) return sizeHasToken(sizes, word);
+    if (nameWords.includes(word)) return true;
+    return word.length >= 3 && nameWords.some(token => token.startsWith(word));
+  });
+}
+
+</script>
+<script>(function () {
+  'use strict';
+
+  const $ = id => document.getElementById(id);
+  const phoneDigits = value => value.replace(/\D/g, '');
+
+  /* ---------- Хранение выбора ---------- */
+  const state = { model: '', sizes: [], size: '', condition: '', name: '', phone: '' };
+
+  const allModels = phones.map(phone => phone.name);
+  const byName = name => phones.find(phone => phone.name === name);
+
+  /* Подбираем модели по запросу, сохраняя исходный порядок (новые сверху). */
+  function suggest(query, limit) {
+    if (!query.trim()) return [];
+    return phones
+      .filter(phone => matchModel(phone.name, phone.sizes, query))
+      .slice(0, limit);
+  }
+
+  function sizeLabel(value) {
+    return value >= 1024 ? (value / 1024 === Math.round(value / 1024) ? value / 1024 : (value / 1024).toFixed(1)) + ' ТБ' : value + ' ГБ';
+  }
+
+  function findSize(label, sizes) {
+    return sizes.find(size => sizeLabel(size) === label) || '';
+  }
+
+  /* ---------- Быстрая оценка в первом экране ---------- */
+  const heroModel = $('hero-model');
+  const heroSuggest = $('hero-suggest');
+  const heroSizes = $('hero-sizes');
+  const heroMemory = $('hero-memory');
+  const heroConditions = $('hero-conditions');
+
+  if (heroConditions) conditions.forEach(([title, note]) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'qc-chip';
+    button.dataset.value = title;
+    button.textContent = title;
+    button.title = note;
+    button.setAttribute('aria-pressed', 'false');
+    button.addEventListener('click', () => {
+      state.condition = state.condition === title ? '' : title;
+      syncQuick();
+    });
+    heroConditions.append(button);
+  });
+
+  function renderHeroSizes() {
+    if (!heroSizes) return;
+    heroSizes.replaceChildren();
+    const model = byName(state.model);
+    heroMemory.classList.toggle('is-visible', Boolean(model));
+    if (!model) return;
+    model.sizes.forEach(size => {
+      const label = sizeLabel(size);
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'qc-chip';
+      button.dataset.value = label;
+      button.textContent = label;
+      button.setAttribute('aria-pressed', String(state.size === label));
+      button.addEventListener('click', () => {
+        state.size = state.size === label ? '' : label;
+        syncQuick();
+      });
+      heroSizes.append(button);
+    });
+  }
+
+  function syncQuick() {
+    if (!heroModel) return;
+    heroConditions.querySelectorAll('button').forEach(button =>
+      button.setAttribute('aria-pressed', String(button.dataset.value === state.condition)));
+    heroSizes.querySelectorAll('button').forEach(button =>
+      button.setAttribute('aria-pressed', String(button.dataset.value === state.size)));
+    if (state.model) heroModel.value = state.model + (state.size ? ' ' + state.size : '');
+    const priceBox = $('hero-price');
+    if (priceBox) {
+      const selected = state.model
+        ? state.model + (state.size && state.size !== 'Не знаю' ? ', ' + state.size : '')
+        : '';
+      priceBox.textContent = selected ? 'Выбрано: ' + selected + '. Продолжите, чтобы мастер назвал цену.' : '';
+      priceBox.hidden = !selected;
+    }
+    syncCalc();
+  }
+
+  function closeSuggest() {
+    heroSuggest.replaceChildren();
+    heroModel.removeAttribute('aria-activedescendant');
+  }
+
+  function renderSuggest() {
+    const matches = suggest(heroModel.value, 6);
+    heroSuggest.replaceChildren();
+    matches.forEach((phone, index) => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.id = 'hero-option-' + index;
+      button.setAttribute('role', 'option');
+      const name = document.createElement('span');
+      name.textContent = phone.name;
+      const meta = document.createElement('small');
+      meta.textContent = phone.sizes.map(sizeLabel).join(' · ');
+      button.append(name, meta);
+      button.addEventListener('click', () => {
+        chooseModel(phone.name);
+        closeSuggest();
+      });
+      heroSuggest.append(button);
+    });
+  }
+
+  function chooseModel(name) {
+    const phone = byName(name);
+    if (!phone) return;
+    if (state.model !== name) {
+      state.model = name;
+      state.sizes = phone.sizes;
+      state.size = '';
+    }
+    renderHeroSizes();
+    syncQuick();
+  }
+
+  heroModel?.addEventListener('input', () => {
+    const typed = heroModel.value.trim().toLowerCase();
+    const exact = allModels.find(name => name.toLowerCase() === typed);
+    renderSuggest();
+    if (exact) chooseModel(exact);
+  });
+
+  heroModel?.addEventListener('keydown', event => {
+    if (event.key === 'Escape') closeSuggest();
+    const options = [...heroSuggest.querySelectorAll('button')];
+    const current = options.indexOf(document.activeElement);
+    if (event.key === 'ArrowDown' && options.length) {
+      event.preventDefault();
+      (current < 0 ? options[0] : options[Math.min(current + 1, options.length - 1)]).focus();
+    }
+    if (event.key === 'ArrowUp' && (current > 0 || (current === 0 && event.currentTarget === heroModel))) {
+      event.preventDefault();
+      if (current <= 0) heroModel.focus();
+      else options[current - 1].focus();
+    }
+    if (event.key === 'Enter') {
+      const target = current >= 0 ? options[current] : options[0];
+      if (target) {
+        event.preventDefault();
+        target.click();
+      }
+    }
+  });
+
+  heroModel?.addEventListener('blur', () => setTimeout(closeSuggest, 150));
+
+  $('quick')?.addEventListener('submit', event => {
+    event.preventDefault();
+    const typed = heroModel.value.trim();
+    const exact = allModels.find(name => name.toLowerCase() === typed);
+    if (exact) chooseModel(exact);
+    if (!state.model && typed) {
+      const first = suggest(typed, 1)[0];
+      if (first) chooseModel(first.name);
+    }
+    syncCalc();
+    const target = state.model ? $('quote') : $('hero-model');
+    target.scrollIntoView({ block: 'start' });
+    if (state.model) {
+      setTimeout(() => (state.size ? $('phone') : $('sizes').querySelector('button'))?.focus({ preventScroll: true }), 450);
+    }
+  });
+
+  /* ---------- Основной калькулятор ---------- */
+  const modelsBox = $('models');
+  const emptyBox = $('models-empty');
+  const matchBox = $('match');
+  const search = $('search');
+  const sizesBox = $('sizes');
+  const stepSize = $('step-size');
+  const conditionsBox = $('conditions');
+  const nameInput = $('name');
+  const phoneInput = $('phone');
+  const errorBox = $('error');
+
+  if (conditionsBox) conditions.forEach(([title, note]) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.dataset.value = title;
+    button.setAttribute('aria-pressed', 'false');
+    const dot = document.createElement('span');
+    dot.className = 'dot';
+    dot.setAttribute('aria-hidden', 'true');
+    const text = document.createElement('span');
+    const strong = document.createElement('b');
+    strong.textContent = title;
+    const small = document.createElement('small');
+    small.textContent = note;
+    text.append(strong, small);
+    button.append(dot, text);
+    button.addEventListener('click', () => {
+      state.condition = state.condition === title ? '' : title;
+      syncCalc();
+    });
+    conditionsBox.append(button);
+  });
+
+  function renderModels() {
+    if (!modelsBox) return;
+    const query = search.value;
+    const matches = query.trim() ? phones.filter(phone => matchModel(phone.name, phone.sizes, query)) : phones;
+    modelsBox.replaceChildren();
+    matches.forEach(phone => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.dataset.value = phone.name;
+      button.textContent = phone.name;
+      button.setAttribute('aria-pressed', String(state.model === phone.name));
+      button.addEventListener('click', () => {
+        chooseModel(phone.name);
+        if (state.model === phone.name && !state.size) $('sizes').querySelector('button')?.focus();
+      });
+      modelsBox.append(button);
+    });
+    emptyBox.hidden = matches.length > 0;
+    matchBox.hidden = !(query.trim() && matches.length);
+    if (query.trim() && matches.length) {
+      matchBox.replaceChildren();
+      const b = document.createElement('b');
+      b.textContent = matches.length === 1 ? 'Нашли модель: ' : 'Подходят ' + matches.length + ' модели: ';
+      const span = document.createElement('span');
+      span.textContent = matches.length === 1 ? matches[0].name : 'выберите нужную в списке ниже';
+      matchBox.append(b, span);
+    }
+  }
+
+  function renderCalcSizes() {
+    if (!stepSize) return;
+    const model = byName(state.model);
+    stepSize.hidden = !model;
+    sizesBox.replaceChildren();
+    if (!model) return;
+    model.sizes.map(sizeLabel).concat('Не знаю').forEach(label => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'qc-chip';
+      button.dataset.value = label;
+      button.textContent = label;
+      button.setAttribute('aria-pressed', String(state.size === label));
+      button.addEventListener('click', () => {
+        state.size = label;
+        syncCalc();
+      });
+      sizesBox.append(button);
+    });
+  }
+
+  function summaryContact() {
+    const parts = [];
+    if (state.name.trim()) parts.push(state.name.trim());
+    if (state.phone.trim()) parts.push(state.phone.trim());
+    return parts.join(', ');
+  }
+
+  function syncCalc() {
+    if (!modelsBox) return;
+    $('out-model').textContent = state.model;
+    $('out-size').textContent = state.size;
+    $('out-condition').textContent = state.condition;
+    $('out-contact').textContent = summaryContact();
+    modelsBox.querySelectorAll('button').forEach(button =>
+      button.setAttribute('aria-pressed', String(button.dataset.value === state.model)));
+    conditionsBox.querySelectorAll('button').forEach(button =>
+      button.setAttribute('aria-pressed', String(button.dataset.value === state.condition)));
+    renderCalcSizes();
+  }
+
+  search?.addEventListener('input', () => {
+    renderModels();
+    const matches = phones.filter(phone => matchModel(phone.name, phone.sizes, search.value));
+    if (matches.length === 1 && search.value.trim().length > 3) chooseModel(matches[0].name);
+  });
+
+  nameInput?.addEventListener('input', () => {
+    state.name = nameInput.value;
+    $('out-contact').textContent = summaryContact();
+  });
+
+  phoneInput?.addEventListener('input', () => {
+    state.phone = phoneInput.value;
+    $('out-contact').textContent = summaryContact();
+    errorBox.textContent = '';
+  });
+
+  function ticketText() {
+    return ['Заявка на оценку iFIX',
+      'Модель: ' + state.model,
+      'Память: ' + state.size,
+      'Состояние: ' + state.condition,
+      'Контакт: ' + summaryContact()
+    ].join('\n');
+  }
+
+  function showStatus(title, note) {
+    const status = $('status');
+    status.replaceChildren();
+    const b = document.createElement('b');
+    b.textContent = title;
+    const span = document.createElement('span');
+    span.textContent = note;
+    status.append(b, span);
+    status.classList.add('is-visible');
+  }
+
+  $('submit')?.addEventListener('click', () => {
+    if (!state.model) {
+      errorBox.textContent = 'Выберите модель телефона.';
+      search.focus();
+      return;
+    }
+    if (!state.size) {
+      errorBox.textContent = 'Выберите объём памяти или «Не знаю».';
+      $('step-size').scrollIntoView({ block: 'center' });
+      $('sizes').querySelector('button')?.focus();
+      return;
+    }
+    if (!state.condition) {
+      errorBox.textContent = 'Отметьте состояние телефона.';
+      conditionsBox.querySelector('button')?.focus();
+      return;
+    }
+    if (phoneDigits(state.phone).length < 10) {
+      errorBox.textContent = 'Укажите телефон, чтобы мастер мог перезвонить.';
+      phoneInput.focus();
+      return;
+    }
+    errorBox.textContent = '';
+    $('ticket').textContent = ticketText();
+    $('ticket').classList.add('is-visible');
+    $('ticket-head').hidden = false;
+    showStatus('Заявка собрана', 'Скопируйте текст и передайте мастеру или назовите данные по телефону.');
+  });
+
+  $('copy')?.addEventListener('click', async () => {
+    const text = $('ticket').textContent;
+    try {
+      await navigator.clipboard.writeText(text);
+      $('copy').textContent = 'Скопировано';
+    } catch (error) {
+      const area = document.createElement('textarea');
+      area.value = text;
+      document.body.append(area);
+      area.select();
+      document.execCommand('copy');
+      area.remove();
+      $('copy').textContent = 'Скопировано';
+    }
+    setTimeout(() => ($('copy').textContent = 'Скопировать текст заявки'), 2000);
+  });
+
+  $('reset')?.addEventListener('click', () => {
+    Object.assign(state, { model: '', sizes: [], size: '', condition: '', name: '', phone: '' });
+    heroModel.value = '';
+    search.value = '';
+    nameInput.value = '';
+    phoneInput.value = '';
+    $('ticket').textContent = '';
+    $('ticket').classList.remove('is-visible');
+    $('ticket-head').hidden = true;
+    $('status').classList.remove('is-visible');
+    errorBox.textContent = '';
+    renderModels();
+    renderHeroSizes();
+    syncQuick();
+    window.scrollTo({ top: $('quote').offsetTop - 80, behavior: 'smooth' });
+  });
+
+  /* ---------- Заявки на ремонт и Trade-In ---------- */
+  const sheet = $('sheet');
+  const sheetForm = $('sheet-form');
+  const sheetResult = $('sheet-result');
+  const sheetError = $('s-error');
+  let currentRequest = 'repair';
+
+  const requestCopy = {
+    repair: {
+      title: 'Заявка на диагностику',
+      lead: 'Бесплатная диагностика в сервисном центре iFIX.',
+      label: 'Что случилось с устройством?',
+      placeholder: 'Например, разбит экран, не держит заряд, залит водой',
+      example: 'iPhone 13 Pro, 256 ГБ'
+    },
+    trade: {
+      title: 'Заявка на Trade-In',
+      lead: 'Обмен старой техники на новую с доплатой.',
+      label: 'Что сдаёте и что хотите получить взамен?',
+      placeholder: 'Например, сдаю iPhone 12 128 ГБ, хочу iPhone 16',
+      example: 'iPhone 12, 128 ГБ'
+    }
+  };
+
+  document.querySelectorAll('[data-request]').forEach(button => {
+    button.addEventListener('click', () => openSheet(button.dataset.request));
+  });
+
+  function openSheet(kind) {
+    currentRequest = kind;
+    const copy = requestCopy[kind];
+    $('sheet-title').textContent = copy.title;
+    $('sheet-lead').textContent = copy.lead;
+    $('s-detail-label').textContent = copy.label;
+    $('s-detail').placeholder = copy.placeholder;
+    $('s-model').placeholder = copy.example;
+    sheetForm.reset();
+    sheetForm.hidden = false;
+    sheetResult.hidden = true;
+    sheetError.textContent = '';
+    sheet.showModal();
+    setTimeout(() => $('s-model').focus(), 50);
+  }
+
+  $('sheet-close').addEventListener('click', () => sheet.close());
+  sheet.addEventListener('click', event => {
+    if (event.target === sheet) sheet.close();
+  });
+
+  sheetForm.addEventListener('submit', event => {
+    event.preventDefault();
+    if (phoneDigits($('s-phone').value).length < 10) {
+      sheetError.textContent = 'Укажите телефон для связи.';
+      $('s-phone').focus();
+      return;
+    }
+    const copy = requestCopy[currentRequest];
+    const lines = [copy.title + ' iFIX', 'Устройство: ' + getValue('s-model'), 'Детали: ' + getValue('s-detail'), 'Контакт: ' + getValue('s-phone')];
+    $('sheet-ticket').textContent = lines.join('\n');
+    sheetForm.hidden = true;
+    sheetResult.hidden = false;
+    $('sheet-copy').focus();
+  });
+
+  function getValue(id) {
+    return $(id).value.trim() || 'не указано';
+  }
+
+  $('s-phone').addEventListener('input', () => (sheetError.textContent = ''));
+
+  $('sheet-edit').addEventListener('click', () => {
+    sheetForm.hidden = false;
+    sheetResult.hidden = true;
+    $('s-model').focus();
+  });
+
+  $('sheet-copy').addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText($('sheet-ticket').textContent);
+    } catch (error) {
+      const area = document.createElement('textarea');
+      area.value = $('sheet-ticket').textContent;
+      document.body.append(area);
+      area.select();
+      document.execCommand('copy');
+      area.remove();
+    }
+    $('sheet-copy').textContent = 'Скопировано';
+    setTimeout(() => ($('sheet-copy').textContent = 'Скопировать'), 2000);
+  });
+
+  /* ---------- Мобильное меню ---------- */
+  const burger = $('burger');
+  const nav = $('nav');
+  burger.addEventListener('click', () => {
+    const open = nav.classList.toggle('is-open');
+    burger.setAttribute('aria-expanded', String(open));
+  });
+  nav.addEventListener('click', event => {
+    if (event.target.closest('a')) {
+      nav.classList.remove('is-open');
+      burger.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  /* ---------- Появление секций ---------- */
+  const reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    reveals.forEach(element => observer.observe(element));
+  } else {
+    reveals.forEach(element => element.classList.add('is-in'));
+  }
+
+  /* ---------- Предзаполнение из адреса страницы ---------- */
+  const params = new URLSearchParams(location.search);
+  if (params.get('model') && byName(params.get('model'))) {
+    chooseModel(params.get('model'));
+    if (search) search.value = params.get('model');
+  }
+  renderModels();
+  syncQuick();
+  renderCalcSizes();
+})();
+</script>
+</body>
+</html>
